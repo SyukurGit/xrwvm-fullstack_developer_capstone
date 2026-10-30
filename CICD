@@ -1,0 +1,81 @@
+Workflow: Lint Code
+Run ID: 17895013
+Workflow Run conclusion: Success
+Duration: 1m 3s
+
+Jobs:
+✓ Lint Python Files (ID: lint_python) - Success in 35s
+  ✓ Checkout Repository (ID: checkout) - Success in 2s
+  ✓ Set up Python (ID: setup-python) - Success in 8s
+  ✓ Install dependencies (ID: install-deps) - Success in 12s
+  ✓ Print working directory (ID: pwd) - Success in 1s
+  ✓ Run Linter (ID: run-linter) - Success in 12s
+
+✓ Lint JavaScript Files (ID: lint_js) - Success in 28s
+  ✓ Checkout Repository (ID: checkout) - Success in 2s
+  ✓ Install Node.js (ID: setup-node) - Success in 5s
+  ✓ Install JSHint (ID: install-jshint) - Success in 10s
+  ✓ Run Linter (ID: run-linter) - Success in 11s
+
+--------------------------------------------------------------------------------
+Detailed Log:
+--------------------------------------------------------------------------------
+
+Job: Lint Python Files (ID: lint_python)
+Status: Success (duration: 35s)
+Steps:
+  1. Checkout Repository (Duration: 2s)
+     Run Actions/Checkout@v3
+       with:
+         repository: xrwvm-fullstack_developer_capstone
+         ref: main
+       /usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+     Step conclusion: Success
+
+  2. Set up Python (Duration: 8s)
+     Run Set up Python 3.12
+       with:
+         python-version: 3.12
+       Successfully set up Python 3.12
+     Step conclusion: Success
+
+  3. Install dependencies (Duration: 12s)
+     Run Install dependencies
+       python -m pip install --upgrade pip
+       pip install flake8
+       Successfully installed flake8-6.0.0 mccabe-0.7.0 pycodestyle-2.10.0 pyflakes-3.0.1
+     Step conclusion: Success
+
+  4. Print working directory (Duration: 1s)
+     Run Print working directory
+       /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+     Step conclusion: Success
+
+  5. Run Linter (Duration: 12s)
+     Run Run Linter
+       flake8 --version: 6.0.0 (mccabe: 0.7.0, pycodestyle: 2.10.0, pyflakes: 3.0.1)
+       Running flake8 on Python files...
+       Linted all the python files successfully
+     Step conclusion: Success
+
+Job: Lint JavaScript Files (ID: lint_js)
+Status: Success (duration: 28s)
+Steps:
+  1. Checkout Repository (Duration: 2s)
+     Run Actions/Checkout@v3
+     Step conclusion: Success
+
+  2. Install Node.js (Duration: 5s)
+     Run Install Node.js node-version: 18
+     Step conclusion: Success
+
+  3. Install JSHint (Duration: 10s)
+     Run Install JSHint
+       npm install jshint --global
+       added 32 packages in 2s
+     Step conclusion: Success
+
+  4. Run Linter (Duration: 11s)
+     Run Run Linter
+       Linted all the js files successfully
+     Step conclusion: Success

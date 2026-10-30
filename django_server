@@ -1,0 +1,10 @@
+Watching for file changes with StatReloader
+System check identified no issues (0 silenced).
+October 30, 2026 - 15:45:10
+Django version 6.0.6, using settings 'djangoproj.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[30/Oct/2026 15:46:22] "GET /djangoapp/get_dealers HTTP/1.1" 301 0
+[30/Oct/2026 15:46:25] "GET /djangoapp/get_dealers/ HTTP/1.1" 200 10650
+[30/Oct/2026 15:47:01] "GET /djangoapp/get_cars HTTP/1.1" 200 684
